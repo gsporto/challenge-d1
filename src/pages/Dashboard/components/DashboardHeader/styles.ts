@@ -1,14 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.main`
-  display: flex;
-  justify-self: center;
-  flex: 1;
-  max-width: 1220px;
-  margin: 0 auto;
-`;
-
-export const Header = styled.header`
+export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,14 +64,3 @@ export const FormContainer = styled.div`
     }
   }
 `;
-
-export const SearchInput = styled.input`
-  background: #ffffff;
-  border: 1px solid #cccfde;
-  border-radius: 5px;
-
-  width: 296px;
-  height: 35px;
-`;
-
-export const Content = styled.section``;

@@ -27,6 +27,10 @@ const GlobalStyle = createGlobalStyle`
     color: #3E4157;
   }
 
+  #root {
+    display: flex;
+  }
+
   body, input , button {
     font-family: 'Gotham-Book',sans-serif;
     font-size: 16px;
