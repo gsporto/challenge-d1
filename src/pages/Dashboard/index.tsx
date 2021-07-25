@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Sidenav } from '../../components/Sidenav';
 import { Container, Content } from './styles';
 
@@ -6,14 +7,19 @@ import { DashboardFilter } from './components/DashboardFilter';
 import { DashboardTable } from './components/DashboardTable';
 
 function Dashboard() {
+  const [selectFilter, setSelectFilter] = useState<number>(0);
+
   return (
     <>
       <Sidenav />
       <Container>
         <DashboardHeader />
         <Content>
-          <DashboardFilter />
-          <DashboardTable idFilter="0" />
+          <DashboardFilter
+            selectFilter={selectFilter}
+            setSelectFilter={setSelectFilter}
+          />
+          <DashboardTable selectFilter={selectFilter} />
         </Content>
       </Container>
     </>

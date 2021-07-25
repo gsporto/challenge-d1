@@ -85,4 +85,5 @@ export const SearchInput = styled.input`
 
 export const Content = styled.section`
   display: flex;
+  flex: 1;
 `;

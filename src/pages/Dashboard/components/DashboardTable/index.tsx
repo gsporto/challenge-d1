@@ -4,23 +4,23 @@ import { getJourney } from 'services/Dashboard';
 import { Container, TableRow } from './styles';
 
 interface DashboardTableProps {
-  idFilter?: string;
+  selectFilter: number;
 }
 
-const DashboardTable = ({ idFilter }: DashboardTableProps) => {
+const DashboardTable = ({ selectFilter }: DashboardTableProps) => {
   const [journeys, setJourneys] = useState<IJourney[]>();
 
   useEffect(() => {
     const async = async () => {
       try {
-        const response = await getJourney(idFilter || '');
+        const response = await getJourney(selectFilter);
         setJourneys(response.data);
       } catch (error) {
         console.log(error.message);
       }
     };
     async();
-  }, []);
+  }, [selectFilter]);
 
   return (
     <Container>

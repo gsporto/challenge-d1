@@ -5,7 +5,16 @@ import { IFilter } from 'dtos/Dashboard';
 import { getFilter } from 'services/Dashboard';
 import { Container, ItemFilter } from './styles';
 
-const DashboardFilter = () => {
+interface DashboardFilterProps {
+  selectFilter: number;
+  // eslint-disable-next-line no-unused-vars
+  setSelectFilter: (id: number) => void;
+}
+
+const DashboardFilter = ({
+  selectFilter,
+  setSelectFilter,
+}: DashboardFilterProps) => {
   const [filters, setFilters] = useState<IFilter[]>();
 
   useEffect(() => {
@@ -26,7 +35,15 @@ const DashboardFilter = () => {
         <ItemFilter key={id}>
           <TableIcon />
           {name}
-          <BadgeCircular size={22}>{quantity}</BadgeCircular>
+          <button
+            type="button"
+            onClick={() => {
+              console.log(selectFilter);
+              setSelectFilter(id);
+            }}
+          >
+            <BadgeCircular size={22}>{quantity}</BadgeCircular>
+          </button>
         </ItemFilter>
       ))}
     </Container>

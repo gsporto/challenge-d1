@@ -9,6 +9,7 @@ export const Container = styled.section`
   flex-direction: column;
   flex: 2;
   gap: 10px;
+  overflow: auto;
 `;
 
 export const TableRow = styled.div<RowProps>`

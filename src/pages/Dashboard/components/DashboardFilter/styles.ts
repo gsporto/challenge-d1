@@ -20,7 +20,9 @@ export const ItemFilter = styled.span`
     height: 16px;
   }
 
-  > div {
+  > button {
     margin-left: auto;
+    border: none;
+    background-color: transparent;
   }
 `;
