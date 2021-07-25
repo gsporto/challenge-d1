@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.main`
   display: flex;
+  flex-direction: column;
   justify-self: center;
   flex: 1;
   max-width: 1220px;
@@ -82,4 +83,6 @@ export const SearchInput = styled.input`
   height: 35px;
 `;
 
-export const Content = styled.section``;
+export const Content = styled.section`
+  display: flex;
+`;
