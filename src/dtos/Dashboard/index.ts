@@ -1,9 +1,7 @@
 export interface IFilter {
+  id: number;
   name: string;
-  status: number;
-  recipients: string;
-  success: string;
-  id: string;
+  quantity: number;
 }
 
 export interface IJourney {
