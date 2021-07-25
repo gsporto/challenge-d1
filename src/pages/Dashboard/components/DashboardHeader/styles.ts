@@ -9,21 +9,6 @@ export const Container = styled.header`
   height: 90px;
 `;
 
-export const BadgeCircular = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-transform: uppercase;
-
-  width: 24px;
-  height: 24px;
-  font-size: 14px;
-  color: #f7f7f7;
-  border-radius: 50%;
-  background: #117eff;
-`;
-
 export const BadgeRectangle = styled.div`
   display: flex;
   justify-content: center;
