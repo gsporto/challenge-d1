@@ -1,8 +1,14 @@
-import { Container } from './styles';
+import { TableIcon } from 'assets/icons';
+import { BadgeCircular } from 'components/BadgeCircular';
+import { Container, ItemFilter } from './styles';
 
 const DashboardFilter = () => (
   <Container>
-    <h1>hello world</h1>
+    <ItemFilter>
+      <TableIcon />
+      Todas
+      <BadgeCircular size={22}>22</BadgeCircular>
+    </ItemFilter>
   </Container>
 );
 

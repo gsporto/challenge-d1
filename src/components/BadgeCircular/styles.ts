@@ -13,7 +13,7 @@ export const Container = styled.div<ContainerProps>`
 
   width: ${({ size }) => size}px;
   height: ${({ size }) => size}px;
-  font-size: 14px;
+  font-size: ${({ size }) => size / 2}px;
   color: #f7f7f7;
   border-radius: 50%;
   background: #117eff;
