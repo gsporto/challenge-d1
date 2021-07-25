@@ -13,7 +13,7 @@ function Dashboard() {
         <DashboardHeader />
         <Content>
           <DashboardFilter />
-          <DashboardTable />
+          <DashboardTable idFilter="0" />
         </Content>
       </Container>
     </>
