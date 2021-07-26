@@ -34,22 +34,16 @@ const DashboardFilter = ({
   return (
     <Container>
       {filters?.map(({ id, quantity }) => (
-        <ItemFilter key={id}>
+        <ItemFilter
+          key={id}
+          type="button"
+          onClick={() => {
+            setSelectFilter(id);
+          }}
+          selected={selectFilter === id}
+        >
           <DashboardStatus id={id} />
-          <button
-            type="button"
-            onClick={() => {
-              setSelectFilter(id);
-            }}
-          >
-            <BadgeCircular
-              color={selectFilter !== id ? '#9196AB' : undefined}
-              background={selectFilter !== id ? '#EBEEF6' : undefined}
-              size={22}
-            >
-              {quantity}
-            </BadgeCircular>
-          </button>
+          <BadgeCircular size={22}>{quantity}</BadgeCircular>
         </ItemFilter>
       ))}
     </Container>

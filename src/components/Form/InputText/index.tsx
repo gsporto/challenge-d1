@@ -17,6 +17,7 @@ export const InputText = ({
   ...rest
 }: ButtonProps) => {
   const [internalValue, setinternalValue] = useState<string>(value);
+  const [isFocused, setIsFocused] = useState<boolean>(false);
 
   const handleValue = (text: string) => {
     onChangeText(text);
@@ -24,12 +25,18 @@ export const InputText = ({
   };
 
   return (
-    <Container>
+    <Container isFocused={isFocused}>
       {Icon}
       <input
         type="text"
         value={internalValue}
         onChange={(event) => handleValue(event.target.value)}
+        onFocus={() => {
+          setIsFocused(true);
+        }}
+        onBlur={() => {
+          setIsFocused(false);
+        }}
         {...rest}
       />
       {value && (

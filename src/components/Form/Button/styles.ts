@@ -13,9 +13,8 @@ export const Container = styled.button`
   border-radius: 5px;
   font-family: ${({ theme }) => theme.fonts.bold};
   font-size: 14px;
-
   color: #ffffff;
-  background: #117eff;
+  background: ${({ theme }) => theme.colors.primary};
   -webkit-transition: background-color 10000ms linear;
   -ms-transition: background-color 10000ms linear;
   transition: background-color 10000ms linear;
