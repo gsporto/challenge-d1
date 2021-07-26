@@ -29,8 +29,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    background: #FAFBFF;
-    color: #3E4157;
+    background: ${({ theme }) => theme.colors.background};
+    font-family: ${({ theme }) => theme.fonts.regular};
+    color: ${({ theme }) => theme.colors.textBody};
   }
 
   #root {
@@ -38,11 +39,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body, input , button {
-    font-family: 'Gotham-Book',sans-serif;
     font-size: 16px;
   }
 
   h1, h2, h3, h4, h5, h6, strong {
+    font-family: ${({ theme }) => theme.fonts.bold};
     font-weight: 500;
   }
 

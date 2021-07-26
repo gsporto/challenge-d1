@@ -10,6 +10,7 @@ export const Container = styled.main`
 
   > strong {
     padding: 35px 0;
+    font-size: 18px;
   }
 `;
 

@@ -29,6 +29,7 @@ function DashboardHeader({
       <FormContainer>
         <InputText
           value={searchField}
+          placeholder="Buscar"
           onChangeText={(text) => setSearchField(text)}
           Icon={<SearchIcon />}
         />
