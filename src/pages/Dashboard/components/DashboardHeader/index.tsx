@@ -3,12 +3,7 @@ import { Button } from 'components/Form/Button';
 import { InputText } from 'components/Form/InputText';
 import { BadgeCircular } from 'components/BadgeCircular';
 import AcmeLogo from 'assets/images/acme-logo.png';
-import {
-  BadgeRectangle,
-  BadgeRectangleImg,
-  FormContainer,
-  Container,
-} from './styles';
+import { BadgeRectangle, FormContainer, Container } from './styles';
 
 interface DashboardHeaderProps {
   searchField: string;
@@ -23,7 +18,7 @@ function DashboardHeader({
     <Container>
       <BadgeCircular size={24}>a</BadgeCircular>
       <BadgeRectangle>
-        <BadgeRectangleImg src={AcmeLogo} alt="ACME" />
+        <img src={AcmeLogo} alt="ACME" />
       </BadgeRectangle>
 
       <FormContainer>

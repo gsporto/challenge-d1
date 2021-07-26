@@ -6,15 +6,20 @@ export const Container = styled.nav`
 
   height: 100vh;
   width: 71px;
-
-  background-color: #1a1731;
+  background-color: ${({ theme }) => theme.colors.secondary};
 `;
 
 export const Spacer = styled.div`
   width: 21px;
   height: 1px;
-  background: transparent linear-gradient(90deg, #00e1ff 0%, #117eff 100%) 0% 0%
-    no-repeat padding-box;
+  background: linear-gradient(90deg, #00e1ff 0%, #117eff 100%) 0% 0%;
+  opacity: 1;
+`;
+
+export const Border = styled.div`
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #00e1ff 0%, #117eff 100%) 0% 0%;
   opacity: 1;
 `;
 

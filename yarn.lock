@@ -2029,6 +2029,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-power-tooltip@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@types/react-power-tooltip/-/react-power-tooltip-1.0.1.tgz#460b045921620739a49a6535c4b9b66cfeb74a82"
+  integrity sha512-7m2RF8374wICIFgdQxTvv7bKWiwQP4cwpYn88RfNY2EWVOcmfxt8sKJ7ixWnar7zNqkR8Z15Vl4oiHJYDKmoOg==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^17.0.0":
   version "17.0.14"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.14.tgz#f0629761ca02945c4e8fea99b8177f4c5c61fb0f"
@@ -9586,6 +9593,11 @@ react-line-awesome@^1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/react-line-awesome/-/react-line-awesome-1.3.2.tgz#05ce200ff2dc2d58d7b8a5d4b35a85affaf24add"
   integrity sha512-UNpMcoxM8kwd3h768NfWDPrWvdk1Um2Mg2P4JUuWkOJKnSY1CAlDTwkyy8umSbG1lZjBRegWAk9sqICqtPGeuA==
+
+react-power-tooltip@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-power-tooltip/-/react-power-tooltip-1.0.2.tgz#1a7c9821542ea84ddcbf1168a09bff4fcb75fe07"
+  integrity sha512-c/aCR92wxOPj+mYp3X3WPOEafIEZCEdjXQJzY72SXaVfCp7lhoaBi0UZcJnqMPcWVwFmtDbhQykqhkBlBsGA4A==
 
 react-refresh@^0.8.3:
   version "0.8.3"

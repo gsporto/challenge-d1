@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Tooltip } from './styles';
 
 interface SidenavIconProps {
@@ -6,23 +6,24 @@ interface SidenavIconProps {
   Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
 }
 
-function SidenavIcon({ Icon, tooltip }: SidenavIconProps) {
+const SidenavIcon = ({ Icon, tooltip }: SidenavIconProps) => {
+  const [showToast, setShowToast] = useState<boolean>(false);
+
   return (
-    <Container data-tip data-for="registerTip">
+    <Container
+      onMouseOver={() => {
+        setShowToast(true);
+      }}
+      onMouseLeave={() => {
+        setShowToast(false);
+      }}
+    >
       <Icon />
-      <Tooltip
-        id="registerTip"
-        className="SideNavIconTooltip"
-        place="right"
-        effect="solid"
-        delayShow={300}
-        backgroundColor="#fff"
-        textColor="#9196ab"
-      >
-        {tooltip}
+      <Tooltip show={showToast}>
+        <span>{tooltip}</span>
       </Tooltip>
     </Container>
   );
-}
+};
 
 export { SidenavIcon };

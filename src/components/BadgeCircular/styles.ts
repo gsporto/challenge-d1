@@ -18,5 +18,8 @@ export const Container = styled.div<ContainerProps>`
   font-size: ${({ size }) => size / 2}px;
   color: ${({ color }) => color ?? '#f7f7f7'};
   border-radius: 50%;
-  background: ${({ background }) => background ?? '#117EFF'};
+  background: ${({ background, theme }) => background ?? theme.colors.primary};
+
+  font-family: ${({ theme }) => theme.fonts.bold};
+  font-weight: 500;
 `;

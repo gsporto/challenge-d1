@@ -17,5 +17,9 @@ export const Container = styled.div`
   > input {
     flex: 1;
     border: none;
+
+    &::placeholder {
+      color: ${({ theme }) => theme.colors.textLight};
+    }
   }
 `;

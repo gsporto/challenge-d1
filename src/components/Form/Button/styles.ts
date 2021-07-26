@@ -23,7 +23,7 @@ export const Container = styled.button`
   &:hover {
     background: linear-gradient(
       90deg,
-      rgba(0, 225, 255, 1) 35%,
+      rgba(0, 225, 255, 0.5) 25%,
       rgba(17, 126, 255, 1) 100%
     );
   }

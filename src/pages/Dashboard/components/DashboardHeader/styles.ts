@@ -17,21 +17,20 @@ export const BadgeRectangle = styled.div`
   height: 30px;
   width: 90px;
 
-  background: #ffffff 0% 0% no-repeat padding-box;
+  background: #ffffff;
   border: 1px solid #ebeef6;
   border-radius: 5px;
   opacity: 1;
+
+  > img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    padding: 2px 11px;
+  }
 `;
-
-export const BadgeRectangleImg = styled.img`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 100%;
-  padding: 2px 11px;
-`;
-
 export const FormContainer = styled.div`
   display: flex;
   flex: 1;

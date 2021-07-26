@@ -20,15 +20,17 @@ export const TableRow = styled.div<RowProps>`
   height: 45px;
   font-size: 14px;
   background: ${({ isHeader }) => (isHeader ? 'transparent' : '#fff')};
-  color: ${({ isHeader }) => (isHeader ? '#9196AB' : '#3E4157')};
+  color: ${({ isHeader, theme }) => {
+    return isHeader ? theme.colors.textLight : theme.colors.textBody;
+  }};
 
   padding: 0 20px;
 
   > * {
-    justify-self: center;
+    justify-self: start;
   }
 
-  > strong {
-    justify-self: start;
+  > span {
+    justify-self: center;
   }
 `;

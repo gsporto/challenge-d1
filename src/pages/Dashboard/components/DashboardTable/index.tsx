@@ -40,10 +40,10 @@ const DashboardTable = ({ selectFilter, searchField }: DashboardTableProps) => {
   return (
     <Container>
       <TableRow isHeader>
-        <strong>Nome</strong>
+        <div>Nome</div>
         <span>Destinatários</span>
         <span>Sucesso</span>
-        <div>Status</div>
+        <span>Status</span>
       </TableRow>
       {journeysFiltered?.map(({ id, name, recipients, success, status }) => (
         <TableRow key={id}>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Sidenav } from '../../components/Sidenav';
+import { Sidenav } from 'components/Sidenav';
 import { Container, Content } from './styles';
 
 import { DashboardHeader } from './components/DashboardHeader';
