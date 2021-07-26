@@ -15,7 +15,7 @@ function DashboardHeader({
   setSearchField,
 }: DashboardHeaderProps) {
   return (
-    <Container>
+    <Container data-testid="dashboard-header-container">
       <BadgeCircular size={24}>a</BadgeCircular>
       <BadgeRectangle>
         <img src={AcmeLogo} alt="ACME" />

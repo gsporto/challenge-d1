@@ -32,7 +32,7 @@ const DashboardFilter = ({
   }, [addToast]);
 
   return (
-    <Container>
+    <Container data-testid="dashboard-filter-container">
       {filters?.map(({ id, quantity }) => (
         <ItemFilter
           key={id}

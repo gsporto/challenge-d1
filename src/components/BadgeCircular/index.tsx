@@ -9,7 +9,11 @@ interface BadgeCircularProps {
 }
 
 function BadgeCircular({ children, ...rest }: BadgeCircularProps) {
-  return <Container {...rest}>{children}</Container>;
+  return (
+    <Container data-testid="badge-circular" {...rest}>
+      {children}
+    </Container>
+  );
 }
 
 export { BadgeCircular };

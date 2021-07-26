@@ -38,7 +38,7 @@ const DashboardTable = ({ selectFilter, searchField }: DashboardTableProps) => {
   }, [journeys, searchField]);
 
   return (
-    <Container>
+    <Container data-testid="dashboard-table-container">
       <TableRow isHeader>
         <div>Nome</div>
         <span>Destinatários</span>

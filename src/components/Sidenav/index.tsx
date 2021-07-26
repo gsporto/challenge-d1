@@ -22,7 +22,7 @@ import {
 
 const Sidenav = () => {
   return (
-    <Container>
+    <Container data-testid="sidenav-container">
       <Border />
       <LogoContainer src={logo} alt="Logo" />
       <NavMenuContainer>
