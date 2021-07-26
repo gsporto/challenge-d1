@@ -36,11 +36,16 @@ const DashboardFilter = ({
           <button
             type="button"
             onClick={() => {
-              console.log(selectFilter);
               setSelectFilter(id);
             }}
           >
-            <BadgeCircular size={22}>{quantity}</BadgeCircular>
+            <BadgeCircular
+              color={selectFilter !== id ? '#9196AB' : undefined}
+              background={selectFilter !== id ? '#EBEEF6' : undefined}
+              size={22}
+            >
+              {quantity}
+            </BadgeCircular>
           </button>
         </ItemFilter>
       ))}

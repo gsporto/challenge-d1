@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 interface ContainerProps {
   size: number;
+  color?: string;
+  background?: string;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -14,7 +16,7 @@ export const Container = styled.div<ContainerProps>`
   width: ${({ size }) => size}px;
   height: ${({ size }) => size}px;
   font-size: ${({ size }) => size / 2}px;
-  color: #f7f7f7;
+  color: ${({ color }) => color ?? '#f7f7f7'};
   border-radius: 50%;
-  background: #117eff;
+  background: ${({ background }) => background ?? '#117EFF'};
 `;
