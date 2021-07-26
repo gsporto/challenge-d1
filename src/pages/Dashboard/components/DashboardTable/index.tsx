@@ -1,5 +1,6 @@
 import { IJourney } from 'dtos/Dashboard';
 import { useEffect, useMemo, useState } from 'react';
+import { useToasts } from 'react-toast-notifications';
 import { getJourney } from 'services/Dashboard';
 import { DashboardStatus } from '../DashboardStatus';
 import { Container, TableRow } from './styles';
@@ -10,6 +11,7 @@ interface DashboardTableProps {
 }
 
 const DashboardTable = ({ selectFilter, searchField }: DashboardTableProps) => {
+  const { addToast } = useToasts();
   const [journeys, setJourneys] = useState<IJourney[]>();
 
   useEffect(() => {
@@ -18,11 +20,13 @@ const DashboardTable = ({ selectFilter, searchField }: DashboardTableProps) => {
         const response = await getJourney(selectFilter);
         setJourneys(response.data);
       } catch (error) {
-        console.log(error.message);
+        addToast('Erro ao carregar Jornadas, tente novamente mais tarde!', {
+          appearance: 'error',
+        });
       }
     };
     async();
-  }, [selectFilter]);
+  }, [addToast, selectFilter]);
 
   const journeysFiltered = useMemo(() => {
     if (!searchField) {

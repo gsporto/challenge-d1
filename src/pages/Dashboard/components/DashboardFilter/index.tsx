@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { BadgeCircular } from 'components/BadgeCircular';
 import { IFilter } from 'dtos/Dashboard';
 import { getFilter } from 'services/Dashboard';
+import { useToasts } from 'react-toast-notifications';
 import { Container, ItemFilter } from './styles';
 import { DashboardStatus } from '../DashboardStatus';
 
@@ -13,6 +14,7 @@ const DashboardFilter = ({
   selectFilter,
   setSelectFilter,
 }: DashboardFilterProps) => {
+  const { addToast } = useToasts();
   const [filters, setFilters] = useState<IFilter[]>([]);
 
   useEffect(() => {
@@ -21,11 +23,13 @@ const DashboardFilter = ({
         const response = await getFilter();
         setFilters(response.data);
       } catch (error) {
-        console.log(error.message);
+        addToast('Erro ao carregar filtros, tente novamente mais tarde!', {
+          appearance: 'error',
+        });
       }
     };
     async();
-  }, []);
+  }, [addToast]);
 
   return (
     <Container>
