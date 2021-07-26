@@ -1,6 +1,7 @@
 import { IJourney } from 'dtos/Dashboard';
 import { useEffect, useState } from 'react';
 import { getJourney } from 'services/Dashboard';
+import { DashboardStatus } from '../DashboardStatus';
 import { Container, TableRow } from './styles';
 
 interface DashboardTableProps {
@@ -35,7 +36,9 @@ const DashboardTable = ({ selectFilter }: DashboardTableProps) => {
           <strong>{name}</strong>
           <span>{recipients}</span>
           <span>{success}</span>
-          <div>{status}</div>
+          <div>
+            <DashboardStatus id={status} />
+          </div>
         </TableRow>
       ))}
     </Container>

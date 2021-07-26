@@ -1,21 +1,20 @@
 import { useEffect, useState } from 'react';
-import { TableIcon } from 'assets/icons';
 import { BadgeCircular } from 'components/BadgeCircular';
 import { IFilter } from 'dtos/Dashboard';
 import { getFilter } from 'services/Dashboard';
 import { Container, ItemFilter } from './styles';
+import { DashboardStatus } from '../DashboardStatus';
 
 interface DashboardFilterProps {
   selectFilter: number;
   // eslint-disable-next-line no-unused-vars
   setSelectFilter: (id: number) => void;
 }
-
 const DashboardFilter = ({
   selectFilter,
   setSelectFilter,
 }: DashboardFilterProps) => {
-  const [filters, setFilters] = useState<IFilter[]>();
+  const [filters, setFilters] = useState<IFilter[]>([]);
 
   useEffect(() => {
     const async = async () => {
@@ -31,10 +30,9 @@ const DashboardFilter = ({
 
   return (
     <Container>
-      {filters?.map(({ id, name, quantity }) => (
+      {filters?.map(({ id, quantity }) => (
         <ItemFilter key={id}>
-          <TableIcon />
-          {name}
+          <DashboardStatus id={id} />
           <button
             type="button"
             onClick={() => {

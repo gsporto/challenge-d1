@@ -16,10 +16,6 @@ export const ItemFilter = styled.span`
   width: 50%;
   font-size: 13px;
 
-  > svg {
-    height: 16px;
-  }
-
   > button {
     margin-left: auto;
     border: none;
