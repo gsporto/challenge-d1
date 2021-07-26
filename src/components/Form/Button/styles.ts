@@ -14,4 +14,15 @@ export const Container = styled.button`
 
   color: #ffffff;
   background: #117eff;
+  -webkit-transition: background-color 10000ms linear;
+  -ms-transition: background-color 10000ms linear;
+  transition: background-color 10000ms linear;
+
+  &:hover {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 225, 255, 1) 35%,
+      rgba(17, 126, 255, 1) 100%
+    );
+  }
 `;
