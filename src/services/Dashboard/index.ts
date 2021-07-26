@@ -1,10 +1,8 @@
 import { IFilter, IJourney } from 'dtos/Dashboard';
 import api from 'services';
 
-const getFilter = async () => api.get<IFilter[]>('/filter');
+export const getFilter = async () => api.get<IFilter[]>('/filter');
 
-const getJourney = async (id: number) => {
+export const getJourney = async (id: number) => {
   return api.get<IJourney[]>(`/journey/${id || ''}`);
 };
-
-export { getFilter, getJourney };

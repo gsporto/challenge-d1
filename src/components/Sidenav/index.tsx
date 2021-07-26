@@ -20,7 +20,7 @@ import {
   Spacer,
 } from './styles';
 
-const Sidenav = () => {
+export const Sidenav = () => {
   return (
     <Container data-testid="sidenav-container">
       <Border />
@@ -43,5 +43,3 @@ const Sidenav = () => {
     </Container>
   );
 };
-
-export { Sidenav };

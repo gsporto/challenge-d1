@@ -10,7 +10,7 @@ interface DashboardFilterProps {
   selectFilter: number;
   setSelectFilter: (id: number) => void;
 }
-const DashboardFilter = ({
+export const DashboardFilter = ({
   selectFilter,
   setSelectFilter,
 }: DashboardFilterProps) => {
@@ -49,5 +49,3 @@ const DashboardFilter = ({
     </Container>
   );
 };
-
-export { DashboardFilter };

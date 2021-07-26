@@ -8,12 +8,10 @@ interface BadgeCircularProps {
   background?: string;
 }
 
-const BadgeCircular = ({ children, ...rest }: BadgeCircularProps) => {
+export const BadgeCircular = ({ children, ...rest }: BadgeCircularProps) => {
   return (
     <Container data-testid="badge-circular" {...rest}>
       {children}
     </Container>
   );
 };
-
-export { BadgeCircular };

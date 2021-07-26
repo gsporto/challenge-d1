@@ -6,7 +6,7 @@ import { DashboardHeader } from './components/DashboardHeader';
 import { DashboardFilter } from './components/DashboardFilter';
 import { DashboardTable } from './components/DashboardTable';
 
-const Dashboard = () => {
+export const Dashboard = () => {
   const [selectFilter, setSelectFilter] = useState<number>(0);
   const [searchField, setSearchField] = useState<string>('');
 
@@ -33,5 +33,3 @@ const Dashboard = () => {
     </>
   );
 };
-
-export { Dashboard };

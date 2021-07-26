@@ -6,7 +6,7 @@ interface SidenavIconProps {
   Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
 }
 
-const SidenavIcon = ({ Icon, tooltip }: SidenavIconProps) => {
+export const SidenavIcon = ({ Icon, tooltip }: SidenavIconProps) => {
   const [showToast, setShowToast] = useState<boolean>(false);
 
   return (
@@ -25,5 +25,3 @@ const SidenavIcon = ({ Icon, tooltip }: SidenavIconProps) => {
     </Container>
   );
 };
-
-export { SidenavIcon };

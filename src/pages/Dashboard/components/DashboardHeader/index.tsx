@@ -10,7 +10,7 @@ interface DashboardHeaderProps {
   setSearchField: (text: string) => void;
 }
 
-const DashboardHeader = ({
+export const DashboardHeader = ({
   searchField,
   setSearchField,
 }: DashboardHeaderProps) => {
@@ -36,5 +36,3 @@ const DashboardHeader = ({
     </Container>
   );
 };
-
-export { DashboardHeader };

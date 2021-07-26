@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   @font-face {
       font-family: 'Gotham-Book';
       src: local('Gotham-Book'),
@@ -51,5 +51,3 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 `;
-
-export { GlobalStyle };

@@ -10,7 +10,10 @@ interface DashboardTableProps {
   searchField: string;
 }
 
-const DashboardTable = ({ selectFilter, searchField }: DashboardTableProps) => {
+export const DashboardTable = ({
+  selectFilter,
+  searchField,
+}: DashboardTableProps) => {
   const { addToast } = useToasts();
   const [journeys, setJourneys] = useState<IJourney[]>();
 
@@ -58,5 +61,3 @@ const DashboardTable = ({ selectFilter, searchField }: DashboardTableProps) => {
     </Container>
   );
 };
-
-export { DashboardTable };
