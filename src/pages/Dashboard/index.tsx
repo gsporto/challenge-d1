@@ -6,7 +6,7 @@ import { DashboardHeader } from './components/DashboardHeader';
 import { DashboardFilter } from './components/DashboardFilter';
 import { DashboardTable } from './components/DashboardTable';
 
-function Dashboard() {
+const Dashboard = () => {
   const [selectFilter, setSelectFilter] = useState<number>(0);
   const [searchField, setSearchField] = useState<string>('');
 
@@ -32,6 +32,6 @@ function Dashboard() {
       </Container>
     </>
   );
-}
+};
 
 export { Dashboard };

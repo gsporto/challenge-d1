@@ -10,10 +10,10 @@ interface DashboardHeaderProps {
   setSearchField: (text: string) => void;
 }
 
-function DashboardHeader({
+const DashboardHeader = ({
   searchField,
   setSearchField,
-}: DashboardHeaderProps) {
+}: DashboardHeaderProps) => {
   return (
     <Container data-testid="dashboard-header-container">
       <BadgeCircular size={24}>a</BadgeCircular>
@@ -35,6 +35,6 @@ function DashboardHeader({
       </FormContainer>
     </Container>
   );
-}
+};
 
 export { DashboardHeader };

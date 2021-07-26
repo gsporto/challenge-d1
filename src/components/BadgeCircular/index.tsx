@@ -8,12 +8,12 @@ interface BadgeCircularProps {
   background?: string;
 }
 
-function BadgeCircular({ children, ...rest }: BadgeCircularProps) {
+const BadgeCircular = ({ children, ...rest }: BadgeCircularProps) => {
   return (
     <Container data-testid="badge-circular" {...rest}>
       {children}
     </Container>
   );
-}
+};
 
 export { BadgeCircular };
