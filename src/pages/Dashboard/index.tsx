@@ -8,18 +8,26 @@ import { DashboardTable } from './components/DashboardTable';
 
 function Dashboard() {
   const [selectFilter, setSelectFilter] = useState<number>(0);
+  const [searchField, setSearchField] = useState<string>('');
 
   return (
     <>
       <Sidenav />
       <Container>
-        <DashboardHeader />
+        <DashboardHeader
+          searchField={searchField}
+          setSearchField={(text) => setSearchField(text)}
+        />
+        <strong>Jornadas</strong>
         <Content>
           <DashboardFilter
             selectFilter={selectFilter}
             setSelectFilter={setSelectFilter}
           />
-          <DashboardTable selectFilter={selectFilter} />
+          <DashboardTable
+            selectFilter={selectFilter}
+            searchField={searchField}
+          />
         </Content>
       </Container>
     </>

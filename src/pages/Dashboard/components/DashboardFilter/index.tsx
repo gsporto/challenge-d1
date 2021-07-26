@@ -7,7 +7,6 @@ import { DashboardStatus } from '../DashboardStatus';
 
 interface DashboardFilterProps {
   selectFilter: number;
-  // eslint-disable-next-line no-unused-vars
   setSelectFilter: (id: number) => void;
 }
 const DashboardFilter = ({

@@ -7,6 +7,10 @@ export const Container = styled.main`
   flex: 1;
   max-width: 1220px;
   margin: 0 auto;
+
+  > strong {
+    padding: 35px 0;
+  }
 `;
 
 export const Header = styled.header`

@@ -1,14 +1,15 @@
 import { IJourney } from 'dtos/Dashboard';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { getJourney } from 'services/Dashboard';
 import { DashboardStatus } from '../DashboardStatus';
 import { Container, TableRow } from './styles';
 
 interface DashboardTableProps {
   selectFilter: number;
+  searchField: string;
 }
 
-const DashboardTable = ({ selectFilter }: DashboardTableProps) => {
+const DashboardTable = ({ selectFilter, searchField }: DashboardTableProps) => {
   const [journeys, setJourneys] = useState<IJourney[]>();
 
   useEffect(() => {
@@ -23,6 +24,15 @@ const DashboardTable = ({ selectFilter }: DashboardTableProps) => {
     async();
   }, [selectFilter]);
 
+  const journeysFiltered = useMemo(() => {
+    if (!searchField) {
+      return journeys;
+    }
+    return journeys?.filter((journey) => {
+      return journey.name.toLowerCase().includes(searchField.toLowerCase());
+    });
+  }, [journeys, searchField]);
+
   return (
     <Container>
       <TableRow isHeader>
@@ -31,7 +41,7 @@ const DashboardTable = ({ selectFilter }: DashboardTableProps) => {
         <span>Sucesso</span>
         <div>Status</div>
       </TableRow>
-      {journeys?.map(({ id, name, recipients, success, status }) => (
+      {journeysFiltered?.map(({ id, name, recipients, success, status }) => (
         <TableRow key={id}>
           <strong>{name}</strong>
           <span>{recipients}</span>

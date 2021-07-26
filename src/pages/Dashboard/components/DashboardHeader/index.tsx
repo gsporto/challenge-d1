@@ -1,19 +1,24 @@
-import { useState } from 'react';
-import { SearchIcon } from 'react-line-awesome';
+import { PlusIcon, SearchIcon } from 'react-line-awesome';
+import { Button } from 'components/Form/Button';
+import { InputText } from 'components/Form/InputText';
+import { BadgeCircular } from 'components/BadgeCircular';
+import AcmeLogo from 'assets/images/acme-logo.png';
 import {
   BadgeRectangle,
   BadgeRectangleImg,
   FormContainer,
   Container,
 } from './styles';
-import AcmeLogo from '../../../../assets/images/acme-logo.png';
-import { ReactComponent as Plus } from '../../../../assets/icons/plus.svg';
-import { Button } from '../../../../components/Form/Button';
-import { InputText } from '../../../../components/Form/InputText';
-import { BadgeCircular } from '../../../../components/BadgeCircular';
 
-function DashboardHeader() {
-  const [searchField, setSearchField] = useState<string>('');
+interface DashboardHeaderProps {
+  searchField: string;
+  setSearchField: (text: string) => void;
+}
+
+function DashboardHeader({
+  searchField,
+  setSearchField,
+}: DashboardHeaderProps) {
   return (
     <Container>
       <BadgeCircular size={24}>a</BadgeCircular>
@@ -24,11 +29,11 @@ function DashboardHeader() {
       <FormContainer>
         <InputText
           value={searchField}
-          onChange={(event) => setSearchField(event.target.value)}
+          onChangeText={(text) => setSearchField(text)}
           Icon={<SearchIcon />}
         />
         <Button>
-          <Plus />
+          <PlusIcon />
           Nova Jornada
         </Button>
       </FormContainer>
