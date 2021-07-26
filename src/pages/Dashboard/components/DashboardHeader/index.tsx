@@ -8,11 +8,13 @@ import { BadgeRectangle, FormContainer, Container } from './styles';
 interface DashboardHeaderProps {
   searchField: string;
   setSearchField: (text: string) => void;
+  setIsOpenModal: () => void;
 }
 
 export const DashboardHeader = ({
   searchField,
   setSearchField,
+  setIsOpenModal,
 }: DashboardHeaderProps) => {
   return (
     <Container data-testid="dashboard-header-container">
@@ -28,7 +30,11 @@ export const DashboardHeader = ({
           onChangeText={(text) => setSearchField(text)}
           Icon={<SearchIcon />}
         />
-        <Button>
+        <Button
+          onClick={() => {
+            setIsOpenModal();
+          }}
+        >
           <PlusIcon />
           Nova Jornada
         </Button>

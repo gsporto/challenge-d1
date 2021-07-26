@@ -5,9 +5,9 @@ import { Container } from './styles';
 
 interface ButtonProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {
-  value: string;
+  value?: string;
   Icon?: ReactNode;
-  onChangeText: (text: string) => void;
+  onChangeText?: (text: string) => void;
 }
 
 export const InputText = ({
@@ -16,11 +16,11 @@ export const InputText = ({
   onChangeText,
   ...rest
 }: ButtonProps) => {
-  const [internalValue, setinternalValue] = useState<string>(value);
+  const [internalValue, setinternalValue] = useState<string>(value || '');
   const [isFocused, setIsFocused] = useState<boolean>(false);
 
   const handleValue = (text: string) => {
-    onChangeText(text);
+    if (onChangeText) onChangeText(text);
     setinternalValue(text);
   };
 
