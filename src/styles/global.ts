@@ -4,15 +4,21 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
       font-family: 'Gotham-Book';
       src: local('Gotham-Book'),
-          url('../assets/fonts/Gotham-Book.woff') format('woff'),
-          url('../assets/fonts/Gotham-Book.woff2') format('woff2');
+        url('fonts/Gotham-Book.woff') format('woff'),
+        url('fonts/Gotham-Book.woff2') format('woff2'),
+        url('fonts/Gotham-Book.ttf') format('ttf'),
+        url('fonts/Gotham-Book.svg') format('svg'),
+        url('fonts/Gotham-Book.eok') format('eok');
   }
 
   @font-face {
       font-family: 'Gotham-Bold';
       src: local('Gotham-Bold'),
-          url('../assets/fonts/Gotham-Bold.woff') format('woff'),
-          url('../assets/fonts/Gotham-Bold.woff2') format('woff2');
+        url('fonts/Gotham-Bold.woff') format('woff'),
+        url('fonts/Gotham-Bold.woff2') format('woff2'),
+        url('fonts/Gotham-Bold.ttf') format('ttf'),
+        url('fonts/Gotham-Bold.svg') format('svg'),
+        url('fonts/Gotham-Bold.eok') format('eok');
   }
 
   * {
